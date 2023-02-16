@@ -1,181 +1,179 @@
-*{
-    margin: 0;
-    padding: 0;
-}
 body{
-    font-family: monospace;
+  font-family: monospace;
 }
 #container{
-    font-family: monospace;
-    display: grid;
-    grid-template-columns: 70% 30%;
-    background-color: #00798c;
+  display: flex;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
 }
 #sub-container1{
-    margin: 5% 5% 5% 10%;
-}
-#sub-container2{
-    margin: 0% 0% 5% 20%;
-    height: auto;
-    min-height: 400px;
-    background-color: #edae49;
-}
-#answerInput{
-    width: 50%;
-    height: 40px;
-    border: #edae49 solid 2px;
-    border-radius: 5px;
-    padding: 1%;
-    margin-left: 15%;
-}
-#submitButton{
-    width: 10%;
-    height: 50px;
-    margin: 2%;
-    background-color: #edae49;
-    border-radius: 5px;
-    border: #edae49;
-    font-weight: bold;
+  display: flex;
+  flex-direction:column;
+  gap: 10%;
+  padding: 10% 5% 0 5%;
+  width: 65%;
+  height: auto;
 }
 #restart{
-    width: 30%;
-    height: 50px;
-    margin: 10% 20% 20% 15%;
-    background-color: #edae49;
-    border-radius: 5px;
-    border: #edae49;
-    font-weight: bold;
+  color: black;
+  text-decoration: none;
 }
-#submitButton:hover, #restart:hover{
-    background-color: black;
-    color: #edae49;
+#restart:hover{
+  text-decoration: underline;
+}
+#answerInput{
+  width: 50%;
+  height: 50px;
+  border: #710193 solid 2px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  padding: 0 0 0 2%;
+}
+#answerInput::placeholder{
+  padding-left: 10%;
+}
+#submitButton{
+  width: 10%;
+  height: 50px;
+  margin: 0 0 0 5%;
+  background-color: #710193;
+  border-radius: 5px;
+  border: #710193;
+  font-weight: bold;
+  color: white;
+}
+#holder{
+  display: flex;
+  flex-direction: column-reverse;
+}
+#submitButton:hover {
+  transform: scale(1.1);
+}
+#sub-container2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+  height: auto;
+  background-color: #e39ff6;
 }
 #successDiv{
-    padding: 5%;
-    margin: 3%;
-    font-size: 12px;
+  width: 100%;
+  height: auto;
+  gap: 10%;
+  padding: 10px;
+  font-size: 12px;
+  border: solid #40916c 2px;
+  border-radius: 10px;
+  animation: slideInRight;
+  animation-duration: 0.5s;
+  Box-shadow: 5px 10px rgba(0,0,0,0.19);
 }
 #failDiv{
-    padding: 5%;
-    margin: 3%;
-    font-size: 12px;
+  width: 100%;
+  height: auto;
+  gap: 10%;
+  padding: 10px;
+  font-size: 12px;
+  border: solid #d5606f 2px;
+  border-radius:10px;
+  animation: slideInRight; 
+  animation-duration: 0.5s;
+  Box-shadow: 5px 10px rgba(0,0,0,0.19);
 }
-#failDiv:hover{
-    transform: scale(0.9);
+#failDiv:hover, #successDiv:hover{
+  transform: scale(0.9);
 }
 #scoreHolder{
-    text-align: center;
-    padding-top: 5%;
-    font-size: 40px;
-    font-weight: bold;
-}
-#successDiv{
-    background-color: #40916c;
-    height: 100px;
-    border-radius: 10px;
-    animation: slideInRight; 
-    animation-duration: 0.5s;
-}
-#failDiv {
-    background-color: #d1495b;
-    height: 100px;
-    border-radius: 10px;
-    animation: slideInRight; 
-    animation-duration: 0.5s;
+  text-align: center;
+  padding-top: 5%;
+  font-size: 40px;
+  font-weight: bold;
 }
 #questionLine{
-    font-size: 30px;
-    margin-top: 5%;
-    margin-left: 15%;
-    font-weight: bold;
- }
-span{
-    color: white
+  font-size: 20px;
+  margin: 5% 0 5% 0;
 }
-#myForm{
-    height: auto;
-    min-height: 100px;
-    padding-top: 10%;
+span{
+  color: white
 }
 label{
-    font-size: 20px;
-    size: 20px;
-    margin: 1%;
-    color: #edae49;
-    font-weight: bold;
+  font-size: 20px;
+  size: 20px;
+  margin: 1%;
+  color: #710193;
+  font-weight: bold;
 }
-input{
-    height: 20px;
-    size: 20px;
-    vertical-align: middle;
-    background-color: black; 
-    color: white;
+#input{
+  height: 20px;
+  size: 20px;
+  vertical-align: middle;
+  background-color: black; 
+  color: white;
 }
 label:hover{
-   color: black;
+  text-decoration: underline;
 }
-footer{
-    background-color: black;
-    height: auto;
-    min-height: 50px;
-    margin-top: -1.5%;
-    text-align: center;
-    font-weight: bold;
-    color: #edae49;
-}
-form{
-    margin-left: 15%;
-    animation: slideInRight; 
-    animation-duration: 0.5s;
-}
-#img{
-    width: 30px;
-    margin-left: 40%;
+#myForm{
+  animation: pulse; 
+  animation-duration: 0.9s;
 }
 
-@media only screen and (min-width: 400px) and (max-width: 800px) {
-    #container{
-        display: grid;
-        grid-template-columns:100%;
-       
-    }
-    #sub-container1{
-      height: auto;
-       min-height: 350px;
-    }
-    #sub-container2{
-       margin: 0% 0% 5% 0%;
-        height: auto;
-        min-height: 100px;
-    }
-    #answerInput{
-        width: 80%;
-        height: 40px;
-        margin: 10% 0% 0% 0%;
-    }
-    #submitButton{
-        width: 40%;
-        height: 50px;
-        margin: 10% 0% 0% 20%;
-       
-    }
-    #questionLine{
-        width: 80%;
-        height: 150px;
-        margin: 10% 0% 0% 0%;
-     }
-     #restart{
-        width: 40%;
-        height: 40px;
-        margin: 10% 0% 0% 20%;
-       
-    }
-    footer{
-        background-color: black;
-        height: auto;
-        min-height: 50px;
-        margin-top: -5%;
-        color: #edae49;
-    }
-   }
+@media only screen and (min-width: 200px) and (max-width: 800px) {
+  #container{
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+    padding: 0;
+  }
+  #myForm{
+    display: flex;
+    flex-direction: column;
+  }
+  #sub-container1{
+    display: flex;
+    flex-direction:column;
+    gap: 20%;
+    height: auto;
+    width: 100%;
+  }
+  #sub-container2{
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+  }
+  #holder{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    margin: 5% 5% 5% 5%
+  }
+  #resultHolder {
+    display: flex;
+    
+  }
+  #questionLine{
+    width: 100%;
+    font-size: 18px;
+  }
+  #answerInput{
+    width: 80%;
+    height: 40px;
+    margin: 5% 0 0 0;
+  }
+  #submitButton{
+    width: 40%;
+    height: 50px;
+    margin: 10% 0 0 0;
+  }
+  #questionLine{
+    width: 80%;
+    height: auto;
+    margin: 10% 0% 0% 0%;
+  }
+}
 
