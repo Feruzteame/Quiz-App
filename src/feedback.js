@@ -1,10 +1,10 @@
 export function success(){
-  const sound1 = document.getElementById("sound1")
+  const sound = document.getElementById("sound")
   console.log("success")
-  sound1.play()
+  sound.play()
 }
 export function fail(){
-  const sound3 = document.getElementById("sound3")
+  const sound = document.getElementById("sound")
   console.log("fail")
-  sound3.play()
+  sound.play()
 }
