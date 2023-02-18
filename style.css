@@ -48,7 +48,7 @@ body{
 }
 #holder{
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 #submitButton:hover {
   transform: scale(1.1);
@@ -155,9 +155,6 @@ label:hover{
     display:flex;
     flex-direction: column-reverse;
     align-items: center;
-  }
-  #failDiv, #failDiv {
-    width: 90%;
   }
   #questionLine{
     width: 100%;

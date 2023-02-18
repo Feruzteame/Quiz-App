@@ -1,19 +1,27 @@
 {
-  "name": "quiz-game",
+  "name": "quiz-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "## HOW IT WORKS ? - choose type of question - Put your answer in the input - click submit - check your feedback right side of page(red for incorrect answer with correction / green correct answer) - See total score (one question => 5pts) - Start over to play again",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --config webpack.config.js"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Feruzteame/Quiz-App.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Feruzteame/Quiz-App/issues"
+  },
+  "homepage": "https://github.com/Feruzteame/Quiz-App#readme",
   "devDependencies": {
-    "webpack": "^5.68.0",
-    "webpack-cli": "^4.9.2"
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   },
   "dependencies": {
     "animate.css": "^4.1.1"
