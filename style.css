@@ -59,13 +59,19 @@ body{
   align-items: center;
   width: 35%;
   height: auto;
+  border-left: #710193 solid 2px;
+}
+#feedbackDiv{
+  display:flex;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 #successDiv{
-  width: 100%;
+  width: 80%;
   height: auto;
   gap: 10%;
   padding: 10px;
-  font-size: 12px;
+  font-size: 16px;
   border-left: solid #40916c 5px;
   border-radius: 5px;
   animation: slideInRight;
@@ -74,11 +80,11 @@ body{
   Box-shadow: 5px 10px rgba(0,0,0,0.19);
 }
 #failDiv{
-  width: 100%;
+  width: 80%;
   height: auto;
   gap: 10%;
   padding: 10px;
-  font-size: 12px;
+  font-size: 16px;
   border-left: solid #d5606f 5px;
   border-radius: 5px;
   animation: slideInRight; 
@@ -87,7 +93,7 @@ body{
   Box-shadow: 10px 5px 10px rgba(0,0,0,0.19);
 }
 #failDiv:hover, #successDiv:hover{
-  transform: scale(0.9);
+  transform: scale(1.2);
 }
 #scoreHolder{
   text-align: center;
@@ -150,6 +156,11 @@ label:hover{
     width: 100%;
     height: 300px;
     overflow-y: scroll;
+    border-left: none;
+    border-bottom: #710193 solid 2px;
+  }
+  #successDiv, #failDiv{
+    width: 80%;
   }
   #feedbackDiv{
     display:flex;
