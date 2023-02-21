@@ -1,4 +1,4 @@
-import 'animate.css';
+ import 'animate.css';
 
 import { getSum } from "./score.js";
 import {success} from "./feedback.js";
